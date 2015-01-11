@@ -32,6 +32,11 @@ By default link label will be "Edit This Page". You can change it using plugin c
 
 Above snippet can be used as complete `book.json` file, if your book doesn't have one yet.
 
+## Screenshot
+
+![gitbook-plugin-edit-link](https://cloud.githubusercontent.com/assets/4115/5695161/f5b79002-99b8-11e4-821a-d2af6c729348.png)
+
+
 ## Troubleshooting
 
 1. If you are not seeing the "Edit this page" link, check if your `book.json` is valid. You can use this online tool - [http://json.parser.online.fr/beta/](http://json.parser.online.fr/beta/)
