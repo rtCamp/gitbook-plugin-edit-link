@@ -12,6 +12,10 @@ Link target will be that page's source file on Github or Gitlab or any repo.
 3. Run `gitbook install`. It will automatically install `edit-this-page-link` gitbook plugin for your book. This is needed only once.
 4. Finally build your book (`gitbook build`) or serve (`gitbook serve`) as usual.
 
+### Changing Link Label (Localization)
+
+By default link label will be "Edit This Page". You can change it using plugin config `rtEditLinkLabel`.
+
 ## Sample `book.json` file
 
 *Important*: Make sure you edit value of `rtEditLinkBase`. You can replace `edit` with `tree` if you want source file to open in read-mode, rather than edit-mode directly on github/gitlab.
@@ -20,7 +24,8 @@ Link target will be that page's source file on Github or Gitlab or any repo.
 {
     "plugins": ["edit-link"],
     "pluginsConfig": {
-        "rtEditLinkBase": "https://github.com/USER/REPO/edit/BRANCH/path/to/book"
+        "rtEditLinkBase": "https://github.com/USER/REPO/edit/BRANCH/path/to/book",
+        "rtEditLinkLabel": "Edit This Page"
     }
 }
 ```

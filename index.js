@@ -1,35 +1,22 @@
 module.exports = {
-    book: {
-        // assets: "./book",
-        // js: [
-        //     "test.js"
-        // ],
-        // css: [
-        //     "test.css"
-        // ],
-    //     html: {
-    //         "html:start": function() {
-    //             return "<!-- Start book "+this.options.title+" -->"
-    //         },
-    //         "html:end": function() {
-    //             return "<!-- End of book "+this.options.title+" -->"
-    //         },
-    //
-    //         "head:start": "<!-- head:start -->",
-    //         "head:end": "<!-- head:end -->",
-    //
-    //         "body:start": "<!-- body:start -->",
-    //         "body:end": "<!-- body:end -->"
-    //     }
-    // },
     hooks: {
         // After html generation
         "page:after": function(page) {
 
-            page.content = page.content.replace(
+            rtEditLinkBase = this.options.pluginsConfig.rtEditLinkBase;
+
+            if (typeof this.options.pluginsConfig.rtEditLinkLabel === 'undefined') {
+                rtEditLinkLabel = "Edit This Page";
+            } else {
+                rtEditLinkLabel = this.options.pluginsConfig.rtEditLinkLabel;
+            }
+
+            rtEditLink = '<a href="' + this.options.pluginsConfig.rtEditLinkBase + '/' + page.path + '" class="btn fa fa-edit pull-left">&nbsp;&nbsp;' + rtEditLinkLabel + '</a>';
+
+            page.content = page.content.replace (
                 '<!-- Actions Right -->',
-                '<a href="' + this.options.pluginsConfig.rtEditLinkBase + '/' + page.path + '" class="btn fa fa-edit pull-left"><b>Edit This Page on Github</b></a>' + '<!-- Actions Right -->'
-                )
+                rtEditLink + '<!-- Actions Right -->'
+            )
 
             return page;
         }
