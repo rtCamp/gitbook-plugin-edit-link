@@ -39,4 +39,6 @@ Above snippet can be used as complete `book.json` file, if your book doesn't hav
 
 ## How this work?
 
-This plugin simply looks for HTML comment `<!-- Actions Right -->` in parsed page content and insert HTML will be that page's source file on Github or Gitlab or any repo.
+This plugin simply looks for HTML comment `<!-- Actions Right -->` in parsed page content and insert "edit link" HTML right after it (HTML comment).
+
+This means if that HTML comment changes, this plugin will break (I hope to fix it easily whenever that happen).
