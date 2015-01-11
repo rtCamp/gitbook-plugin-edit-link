@@ -23,18 +23,19 @@ Link target will be that page's source file on Github or Gitlab or any repo.
 {
     "plugins": ["edit-link"],
     "pluginsConfig": {
-        "edit-link": {
-            "base": "https://github.com/USER/REPO/edit/BRANCH/path/to/book",
-            "label": "Edit This Page"
-        }
+            "edit-link": {
+                "base": "https://github.com/USER/REPO/edit/BRANCH/path/to/book",
+                "label": "Edit This Page"
+            }
     }
 }
 ```
-**Important**: Make sure you edit value of `edit-link => base`. You can replace `edit` with `tree` if you want source file to open in read-mode, rather than edit-mode directly on github/gitlab.
-
 **Note**: Above snippet can be used as complete `book.json` file, if your book doesn't have one yet.
 
-### Step #2 - gitbook commands
+    **Github/Gitlab**: In string `...REPO/edit/BRANCH...`, you may replace `edit` with `tree` if you want source file to open in read-mode, rather than edit-mode directly on github/gitlab.
+
+
+    ### Step #2 - gitbook commands
 
 1. Run `gitbook install`. It will automatically install `edit-link` gitbook plugin for your book. This is needed only once.
 2. Build your book (`gitbook build`) or serve (`gitbook serve`) as usual.
