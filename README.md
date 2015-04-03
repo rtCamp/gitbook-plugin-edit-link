@@ -54,7 +54,7 @@ This means if that HTML comment changes, this plugin will break but I hope to fi
 
 **1.2 - 03 April 2015**
 
-- Multiligual gitbook support added by @aniav (#2)
+- Multiligual gitbook support added by [@aniav](https://github.com/aniav) ([#2]())
 
 **1.1.3 - 11 Jan 2015**
 
