@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     hooks: {
         // After html generation
@@ -12,7 +14,9 @@ module.exports = {
                 config.label = "Edit This Page";
             }
 
-            rtEditLink = '<a href="' + config.base + '/' + page.path + '" class="btn fa fa-edit pull-left">&nbsp;&nbsp;' + config.label + '</a>';
+            newPath = path.relative(this.options.originalInput, page.rawPath);
+
+            rtEditLink = '<a href="' + config.base + '/' + newPath + '" class="btn fa fa-edit pull-left">&nbsp;&nbsp;' + config.label + '</a>';
 
             page.content = page.content.replace (
                 '<!-- Actions Right -->',
