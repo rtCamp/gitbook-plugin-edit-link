@@ -49,3 +49,13 @@ Link target will be that page's source file on Github or Gitlab or any repo.
 This plugin simply looks for HTML comment `<!-- Actions Right -->` in parsed page content and insert "edit link" HTML just before `<!-- Actions Right -->`.
 
 This means if that HTML comment changes, this plugin will break but I hope to fix it easily whenever that happen.
+
+## Changelog
+
+*1.2 - 03 April 2015*
+
+- Multiligual gitbook support added by @aniav (#2)
+
+*1.1.3 - 11 Jan 2015*
+
+- Initial release
