@@ -52,10 +52,10 @@ This means if that HTML comment changes, this plugin will break but I hope to fi
 
 ## Changelog
 
-*1.2 - 03 April 2015*
+**1.2 - 03 April 2015**
 
 - Multiligual gitbook support added by @aniav (#2)
 
-*1.1.3 - 11 Jan 2015*
+**1.1.3 - 11 Jan 2015**
 
 - Initial release
