@@ -1,9 +1,13 @@
 var path = require('path');
 
 module.exports = {
+    book: {
+        assets: "./book",
+        js: ["plugin.js"]
+    },
     hooks: {
         // After html generation
-        "page:after": function(page) {
+        "page": function(page) {
             var config = this.options.pluginsConfig["edit-link"] || {};
 
             if (!config.base) {
@@ -14,14 +18,30 @@ module.exports = {
                 config.label = "Edit This Page";
             }
 
-            newPath = path.relative(this.options.originalInput, page.rawPath);
+            // add  slash at the end if not present
+            var base = config.base;
+            if(base.slice(-1) != "/") {
+                base = base + "/";
+            }
 
-            rtEditLink = '<a href="' + config.base + '/' + newPath + '" class="btn fa fa-edit pull-left">&nbsp;&nbsp;' + config.label + '</a>';
+            // relative path to the page
+            var newPath = path.relative(this.root, page.rawPath);
 
-            page.content = page.content.replace (
-                '<!-- Actions Right -->',
-                rtEditLink + '<!-- Actions Right -->'
-            )
+            // language, if configured
+            var lang = "";
+            if(this.context.config.language) {
+                lang = this.context.config.language + "/";
+            }
+
+            rtEditLink = '<a id="edit-link" href="' + base + lang + newPath + '" class="btn fa fa-edit pull-left">&nbsp;&nbsp;' + config.label + '</a>';
+
+            page.sections
+                .filter(function(section) {
+                    return section.type == 'normal';
+                })
+                .forEach(function(section) {
+                    section.content = rtEditLink + section.content;
+                });
 
             return page;
         }
