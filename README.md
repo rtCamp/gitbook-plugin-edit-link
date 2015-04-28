@@ -81,7 +81,7 @@ This means if that HTML comment changes, this plugin will break but I hope to fi
 
 **1.3 - 28 April 2015**
 
-- Gitbook 2.0.1 compatibility added by [@todvora](https://github.com/rtCamp/gitbook-plugin-edit-link/pull/4). Please see known-issues for more details.
+- Gitbook 2.0.1 compatibility added by [@todvora](https://github.com/rtCamp/gitbook-plugin-edit-link/pull/4). Please see [Known Issue](https://github.com/rtCamp/gitbook-plugin-edit-link#known-issue) section for more details.
 
 **1.2 - 03 April 2015**
 
