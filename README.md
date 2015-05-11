@@ -32,6 +32,24 @@ Link target will be that page's source file on Github or Gitlab or any repo.
 }
 ```
 
+#### Sample `book.json` file for gitbook version 2.0.1+ and multilingual labels
+
+```
+{
+    "gitbook": "2.0.1",
+    "plugins": ["edit-link"],
+    "pluginsConfig": {
+            "edit-link": {
+                "base": "https://github.com/USER/REPO/edit/BRANCH/path/to/book",
+                "label": {
+                    "en": "Edit This Page",
+                    "de": "Seite bearbeiten"
+                }
+            }
+    }
+}
+```
+
 #### Sample `book.json` file for older gitbook versions <= 1.5.0
 
 ```
