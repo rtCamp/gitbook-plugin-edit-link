@@ -97,11 +97,19 @@ This means if that HTML comment changes, this plugin will break but I hope to fi
 
 ## Changelog
 
-**1.3 - 28 April 2015**
+**1.4.0 - 11 May 2015**
+
+Entire release is contributed by [@aschempp](https://github.com/aschempp)
+
+- Remove link in PDF (#5)
+- Labels can now be multilingual
+- Hide label on mobile view (prevents ugly breaks in social icons)
+
+**1.3.0 - 28 April 2015**
 
 - Gitbook 2.0.1 compatibility added by [@todvora](https://github.com/rtCamp/gitbook-plugin-edit-link/pull/4). Please see known-issues for more details.
 
-**1.2 - 03 April 2015**
+**1.2.0 - 03 April 2015**
 
 - Multiligual gitbook support added by [@aniav](https://github.com/aniav) ([#2](https://github.com/rtCamp/gitbook-plugin-edit-link/pull/2))
 
