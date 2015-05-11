@@ -3,7 +3,8 @@ var path = require('path');
 module.exports = {
     book: {
         assets: "./book",
-        js: ["plugin.js"]
+        js: ["plugin.js"],
+        css: ["plugin.css"]
     },
     hooks: {
         // After html generation
