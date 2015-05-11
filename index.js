@@ -9,6 +9,10 @@ module.exports = {
     hooks: {
         // After html generation
         "page": function(page) {
+            if(this.config.options.generator !== 'website') {
+                return page;
+            }
+
             var config = this.options.pluginsConfig["edit-link"] || {};
 
             if (!config.base) {
