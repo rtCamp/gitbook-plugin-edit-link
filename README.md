@@ -101,7 +101,7 @@ This means if that HTML comment changes, this plugin will break but I hope to fi
 
 Entire release is contributed by [@aschempp](https://github.com/aschempp)
 
-- Remove link in PDF (#5)
+- Remove link in PDF (#5)(https://github.com/rtCamp/gitbook-plugin-edit-link/pull/5)
 - Labels can now be multilingual
 - Hide label on mobile view (prevents ugly breaks in social icons)
 
