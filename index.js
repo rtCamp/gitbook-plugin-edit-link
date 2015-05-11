@@ -3,20 +3,23 @@ var path = require('path');
 module.exports = {
     book: {
         assets: "./book",
-        js: ["plugin.js"]
+        js: ["plugin.js"],
+        css: ["plugin.css"]
     },
     hooks: {
         // After html generation
         "page": function(page) {
+            if(this.config.options.generator !== 'website') {
+                return page;
+            }
+
             var config = this.options.pluginsConfig["edit-link"] || {};
 
             if (!config.base) {
                 throw "ERROR: 'base' value required to generate 'Edit This Page' link. \nFor help, please refer to - https://github.com/rtCamp/gitbook-plugin-edit-link/blob/master/README.md#usage";
             }
 
-            if (!config.label) {
-                config.label = "Edit This Page";
-            }
+            var label = config.label[this.context.config.language] || config.label || "Edit This Page";
 
             // add  slash at the end if not present
             var base = config.base;
@@ -33,7 +36,7 @@ module.exports = {
                 lang = this.context.config.language + "/";
             }
 
-            rtEditLink = '<a id="edit-link" href="' + base + lang + newPath + '" class="btn fa fa-edit pull-left">&nbsp;&nbsp;' + config.label + '</a>';
+            rtEditLink = '<a id="edit-link" href="' + base + lang + newPath + '" class="btn fa fa-edit pull-left">&nbsp;&nbsp;' + label + '</a>';
 
             page.sections
                 .filter(function(section) {
