@@ -1,11 +1,11 @@
 @media screen and (max-width: 850px) {
-    body.with-summary .edit-link {
+    .with-summary #edit-link {
         overflow: hidden;
         width: 30px;
     }
 }
 @media screen and (max-width: 500px) {
-    .edit-link {
+    #edit-link {
         overflow: hidden;
         width: 30px;
     }
