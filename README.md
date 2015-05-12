@@ -97,11 +97,15 @@ This means if that HTML comment changes, this plugin will break but I hope to fi
 
 ## Changelog
 
+**1.4.1 - 12 May 2015**
+
+- Fixed error when there was no label set in config [#7](https://github.com/rtCamp/gitbook-plugin-edit-link/pull/7) by [@aschempp](https://github.com/aschempp)
+
 **1.4.0 - 11 May 2015**
 
 Entire release is contributed by [@aschempp](https://github.com/aschempp)
 
-- Remove link in PDF (#5)(https://github.com/rtCamp/gitbook-plugin-edit-link/pull/5)
+- Remove link in PDF [#5](https://github.com/rtCamp/gitbook-plugin-edit-link/pull/5)
 - Labels can now be multilingual
 - Hide label on mobile view (prevents ugly breaks in social icons)
 
