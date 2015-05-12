@@ -19,7 +19,7 @@ module.exports = {
                 throw "ERROR: 'base' value required to generate 'Edit This Page' link. \nFor help, please refer to - https://github.com/rtCamp/gitbook-plugin-edit-link/blob/master/README.md#usage";
             }
 
-            var label = config.label[this.context.config.language] || config.label || "Edit This Page";
+            var label = (config.label && config.label[this.context.config.language]) || config.label || "Edit This Page";
 
             // add  slash at the end if not present
             var base = config.base;
