@@ -5,24 +5,24 @@
     "version": "1.2.0",
     "author": "rtCamp <admin@rtcamp.com>",
     "contributors": [
-	{
-        "name": "Rahul Bansal",
-        "email": "rahul.bansal@rtcamp.com"
+       {
+            "name": "Rahul Bansal",
+            "email": "rahul.bansal@rtcamp.com"
         },
         {
             "name": "Samy Pessé",
             "email": "samy@gitbook.com"
         }
-	],
+    ],
     "engines": {
-        "gitbook": "*"
+        "gitbook": ">=2.5.0"
     },
     "homepage": "https://github.com/rtCamp/gitbook-plugin-edit-link",
     "repository": {
         "type": "git",
         "url": "https://github.com/rtCamp/gitbook-plugin-edit-link.git"
     },
-    "license": "Apache 2",
+    "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/rtCamp/gitbook-plugin-edit-link/issues"
     },
@@ -31,5 +31,19 @@
         "plugin",
         "edit-with",
         "github"
-    ]
+    ],
+    "gitbook": {
+        "properties": {
+            "base": {
+                "type": "string",
+                "title": "Base for the edit redirection",
+                "required": true
+            },
+            "label": {
+                "type": [ "string", "object" ],
+                "title": "Label for the edit button",
+                "default": "Edit This Page"
+            }
+        }
+    }
 }
