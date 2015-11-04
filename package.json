@@ -4,10 +4,16 @@
     "main": "index.js",
     "version": "1.2.0",
     "author": "rtCamp <admin@rtcamp.com>",
-    "contributors": [{
+    "contributors": [
+	{
         "name": "Rahul Bansal",
         "email": "rahul.bansal@rtcamp.com"
-        }],
+        },
+        {
+            "name": "Samy Pessé",
+            "email": "samy@gitbook.com"
+        }
+	],
     "engines": {
         "gitbook": "*"
     },
