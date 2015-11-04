@@ -1,35 +1,35 @@
 {
-    "name": "gitbook-plugin-edit-link",
-    "description": "GitBook Plugin to add \"Edit this page\" link on every page. Link target will be that page's source file on Github or Gitlab or any repo.",
-    "main": "index.js",
-    "version": "1.2.0",
-    "author": "rtCamp <admin@rtcamp.com>",
-    "contributors": [
-	{
-        "name": "Rahul Bansal",
-        "email": "rahul.bansal@rtcamp.com"
-        },
-        {
-            "name": "Samy Pessé",
-            "email": "samy@gitbook.com"
-        }
-	],
-    "engines": {
-        "gitbook": "*"
+  "name": "gitbook-plugin-edit-link",
+  "description": "GitBook Plugin to add \"Edit this page\" link on every page. Link target will be that page's source file on Github or Gitlab or any repo.",
+  "main": "index.js",
+  "version": "1.2.1",
+  "author": "rtCamp <admin@rtcamp.com>",
+  "contributors": [
+    {
+      "name": "Rahul Bansal",
+      "email": "rahul.bansal@rtcamp.com"
     },
-    "homepage": "https://github.com/rtCamp/gitbook-plugin-edit-link",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rtCamp/gitbook-plugin-edit-link.git"
-    },
-    "license": "Apache 2",
-    "bugs": {
-        "url": "https://github.com/rtCamp/gitbook-plugin-edit-link/issues"
-    },
-    "keywords": [
-        "gitbook",
-        "plugin",
-        "edit-with",
-        "github"
-    ]
+    {
+      "name": "Samy Pessé",
+      "email": "samy@gitbook.com"
+    }
+  ],
+  "engines": {
+    "gitbook": "*"
+  },
+  "homepage": "https://github.com/rtCamp/gitbook-plugin-edit-link",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rtCamp/gitbook-plugin-edit-link.git"
+  },
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/rtCamp/gitbook-plugin-edit-link/issues"
+  },
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "edit-with",
+    "github"
+  ]
 }
