@@ -14,7 +14,7 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
             text: label,
             onClick: function() {
                 var filepath = gitbook.state.filepath;
-                var lang = $('html').attr('lang');
+                var lang = gitbook.state.innerLanguage;
                 if (lang) lang = lang + '/';
 
                 window.open(base + lang + filepath);
